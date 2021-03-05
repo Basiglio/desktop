@@ -15,14 +15,30 @@ $(document).ready(function () {
       setTimeout(() => {
         $('.text_display_none').toggleClass('display_none');
         typeWriter();
-      }, 6000);
+      }, 3500);
+      setTimeout(() => {
+        $('.contact').removeClass('display_none')
+      }, 10000);
     }
     
   });
 
+
   $("#trigger_view").click(function () {
-    $('.contact_view').toggleClass('display_none');
+    $('.contact_view').toggle();
+    // if (('.contact_view').hasClass('display_none') == false) {
+    //   $('.contact_view').removeClass('animate__backInUp').addClass('animate__backOutDown');
+    // } else {
+    //   $('.contact_view').removeClass('animate__backOutDown').addClass('animate__backInUp');
+    // }
   })
+
+
+  
+
+  
+
+  
 
 
 
@@ -30,7 +46,7 @@ $(document).ready(function () {
   
   // TYPEWRITE EFFECT
   var i = 0;
-  var txt = "Grande appassionato di enogastronomia, una volta finite le superiori ho navigato per 15 anni nella ristorazione. Oggi cambio rotta ed apro le vele sul mondo del web e non solo. Grande amore, da sempre, portato avanti come hobby, dopo un 2020 che ha rivoluzionato le nostra vite ho seguito il vento del cambiamento ed ho ripreso i libri in mano per curare la mia formazione tecnologica grazie anche al supporto dell' accademia digitale Boolean.";
+  var txt = "Grande appassionato di enogastronomia, una volta finite le superiori ho navigato per 15 anni nella ristorazione. Oggi cambio rotta ed apro le vele sul mondo del web e non solo. Grande amore, da sempre, portato avanti come hobby, dopo un 2020 che ha rivoluzionato le nostre vite ho seguito il vento del cambiamento ed ho ripreso i libri in mano per curare la mia formazione tecnologica grazie anche al supporto dell' accademia digitale Boolean.";
   var speed = 50;
 
 
@@ -41,6 +57,18 @@ $(document).ready(function () {
       i++;
       setTimeout(typeWriter, speed);
     }
+  }
+
+
+
+  // MUSIC EFFECT
+
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome) {
+    $('#iframeAudio').remove()
+  }
+  else {
+    $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
   }
 
 

@@ -97,7 +97,9 @@ body {
   0% {
     width: 0%;
     height: 0%;
-    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   100% {
     width: 40%;
@@ -120,6 +122,9 @@ body {
   0% {
     width: 0%;
     height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   100% {
     width: 60%;
@@ -131,7 +136,7 @@ body {
 .mac_top {
   width: 100%;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
 }
@@ -140,7 +145,6 @@ body {
   height: calc(100% - 40px);
   background-color: black;
   padding: 30px;
-  position: relative;
 }
 
 .content_right {
@@ -152,13 +156,13 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   animation-name: content_resize_right;
-  animation-duration: 6s;
+  animation-duration: 8s;
 }
 @keyframes content_resize_right {
     0% {
       width: 0px;
       height: 0px;
-      right: 50%;
+      rigth: 20%;
       bottom: 50%;
     }
     100% {
@@ -170,14 +174,12 @@ body {
 .red, .yellow, .green{
   font-size: 12px;
   margin-left: 10px;
-  cursor: pointer;
 }
 .red_animate, .yellow_animate, .green_animate{
   font-size: 12px;
   margin-left: 10px;
   animation-name: popUp;
-  animation-duration: 8s;
-  cursor: pointer;
+  animation-duration: 6s;
 }
 .red {
   color: #FF6052;
@@ -273,18 +275,31 @@ li > i {
 
 .contact {
   position: absolute;
-  left: 30%;
-  bottom: 1%;
+  right: 5%;
+  top: 5%;
+  width: 350px;
+  height: 80px;
+  padding: 15px;
+  background-color: black;
+  border-radius: 5px;
 }
 .contact:hover {
   cursor: pointer;
   color: tomato;
 }
-
-.contact > i {
-  font-size: 80px;
-  animation-name: popUpInfoBox;
-  animation-duration: 12s;
+.img_trigger {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url('me.jpeg');
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contact > h6 {
+  font-size: 15px;
+  color: white;
+  display: inline-block;
 }
 @keyframes popUpInfoBox {
   0% {
@@ -300,6 +315,7 @@ li > i {
   position: absolute;
   left: 22%;
   top: 3%;
+  border: 1px solid black;
   border-radius: 5px;
 }
 .photo {
@@ -309,7 +325,6 @@ li > i {
   right: 8%;
   top: 12%;
   border: 1px solid white;
-  border-radius: 5px;
   background-image: url("me.jpeg");
   background-size: cover;
   background-position: center;
@@ -329,6 +344,7 @@ li > i {
 .info_box p {
   font-size: 50px;
   margin-top: 65px;
+  margin-bottom: 10px;
   text-align: center;
 }
 #linkedin {
@@ -356,7 +372,16 @@ footer {
   text-align: right;
 }
 
-
+audio {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 25px;
+}
+#music_label {
+  text-align: center;
+  font-size: 18px;
+}
 
 .colorHTML {
   color: #E54B20;
