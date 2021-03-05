@@ -10,6 +10,7 @@ $(document).ready(function () {
   $("#btn").click(function () {
     $('span').removeClass('display_none');
     $('#btn').toggleClass('display_none');
+    $('#login').addClass('display_none');
     if ($('span').hasClass('display_none') == false) {
       setTimeout(() => {
         $('.text_display_none').toggleClass('display_none');
@@ -18,6 +19,12 @@ $(document).ready(function () {
     }
     
   });
+
+  $("#trigger_view").click(function () {
+    $('.contact_view').toggleClass('display_none');
+  })
+
+
 
   
   
@@ -35,6 +42,7 @@ $(document).ready(function () {
       setTimeout(typeWriter, speed);
     }
   }
+
 
 });
 
