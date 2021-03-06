@@ -13,6 +13,10 @@ body {
 .display_none {
   display: none;
 }
+.display_block {
+  display: block;
+}
+
 
 #login {
   width: 300px;
@@ -88,8 +92,8 @@ body {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -40%);
-  animation-name: content_resize_left;
-  animation-duration: 6s;
+  /* animation-name: content_resize_left;
+  animation-duration: 6s; */
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -115,8 +119,8 @@ body {
   top: 5%;
   border: 1px solid black;
   border-radius: 5px;
-  animation-name: content_back_resize_left;
-  animation-duration: 6s;
+  /* animation-name: content_back_resize_left;
+  animation-duration: 6s; */
 }
 @keyframes content_back_resize_left {
   0% {
@@ -155,8 +159,8 @@ body {
   bottom: 2%;
   border: 1px solid black;
   border-radius: 5px;
-  animation-name: content_resize_right;
-  animation-duration: 8s;
+  /* animation-name: content_resize_right;
+  animation-duration: 8s; */
 }
 @keyframes content_resize_right {
     0% {

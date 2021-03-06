@@ -25,13 +25,36 @@ $(document).ready(function () {
 
 
   $("#trigger_view").click(function () {
-    $('.contact_view').toggle();
-    // if (('.contact_view').hasClass('display_none') == false) {
-    //   $('.contact_view').removeClass('animate__backInUp').addClass('animate__backOutDown');
-    // } else {
-    //   $('.contact_view').removeClass('animate__backOutDown').addClass('animate__backInUp');
-    // }
-  })
+    $('.contact_view').toggle('display_none');
+     if (!$('.contact_view').hasClass('display_block') == true) {
+      $('#trigger_view').addClass('display_none');
+     } 
+  });
+
+
+  // GESTIONE EXIT
+
+  // EXIT STACK
+  $('#exit_stack').click(function () {
+    $('.content_back_left').toggle('display_none');
+  });
+  // EXIT NAME
+  $('#exit_name').click(function () {
+    $('.content_left').toggle('display_none');
+  });
+
+  // EXIT STORY
+  $('#exit_story').click(function () {
+    $('.content_right').toggle('display_none');
+  });
+
+  // EXIT CONTACT
+  $('#exit_contact').click(function () {
+    $('.contact_view').toggle('display_block');
+    if ($('.contact_view').hasClass('display_none')) {
+      $('#trigger_view').addClass('display_block');
+    }
+  });
 
 
   
@@ -57,18 +80,6 @@ $(document).ready(function () {
       i++;
       setTimeout(typeWriter, speed);
     }
-  }
-
-
-
-  // MUSIC EFFECT
-
-  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome) {
-    $('#iframeAudio').remove()
-  }
-  else {
-    $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
   }
 
 
